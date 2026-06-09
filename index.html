@@ -752,7 +752,7 @@
   <div id="feedback" class="section-label" style="margin-top:36px;">Share feedback</div>
   <div class="feedback-widget">
     <h3>How useful is this guide?</h3>
-    <p>Your feedback helps us improve. All responses go directly to Alica May, Director of Customer Marketing.</p>
+    <p>Your feedback helps us improve. Responses go directly to Alica May, Director of Customer Marketing.</p>
     <div class="star-row" id="starRow">
       <button class="star-btn" data-value="1" onclick="selectStar(1)" onmouseover="hoverStar(1)" onmouseout="unhoverStar()">★</button>
       <button class="star-btn" data-value="2" onclick="selectStar(2)" onmouseover="hoverStar(2)" onmouseout="unhoverStar()">★</button>
@@ -767,7 +767,7 @@
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       Send feedback
     </button>
-    <div class="feedback-success" id="feedbackSuccess">Thank you! Your feedback has been sent to Alica May.</div>
+    <div class="feedback-success" id="feedbackSuccess" style="display:none;margin-top:12px;padding:12px 16px;background:var(--orange-light);border-radius:6px;color:var(--orange-dark);font-size:13px;font-weight:500;"></div>
   </div>
 
 
@@ -871,7 +871,7 @@
   function unhoverStar() {
     document.querySelectorAll('.star-btn').forEach(btn => btn.classList.remove('hover'));
   }
-  async function submitFeedback() {
+  function submitFeedback() {
     if (selectedRating === 0) {
       alert('Please select a star rating before submitting.');
       return;
@@ -880,49 +880,25 @@
     const comment = document.getElementById('feedbackComment').value.trim();
     const name    = document.getElementById('feedbackName').value.trim();
     const stars   = '\u2605'.repeat(selectedRating) + '\u2606'.repeat(5 - selectedRating);
-    const submitBtn = document.querySelector('.feedback-submit');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending\u2026';
 
-    const tzOffset = -new Date().getTimezoneOffset();
-    const answers = [{ question_id: 'ratingvd295e42', rating: selectedRating }];
-    if (comment) answers.push({ question_id: 'long_textx96blyok', long_text: comment });
-    if (name)    answers.push({ question_id: 'name', name: name });
+    const subject = encodeURIComponent('CS Support Guide Feedback — ' + stars);
+    const body    = encodeURIComponent(
+      'Rating: ' + stars + ' (' + selectedRating + '/5)' +
+      (name    ? '\nSubmitted by: ' + name       : '') +
+      (comment ? '\n\nComments:\n'  + comment     : '') +
+      '\n\n— Sent from the CS Support Request Guide'
+    );
 
-    const query = `mutation {
-      create_form_response(
-        form_token: "2bec53b2142b459619f431ade24c085f",
-        form_timezone_offset: ${tzOffset},
-        answers: ${JSON.stringify(JSON.stringify(answers))}
-      ) { id }
-    }`;
+    window.location.href = 'mailto:a.may@elsevier.com?subject=' + subject + '&body=' + body;
 
-    try {
-      const res = await fetch('https://workforms.monday.com/api/v1/form-responses', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          form_token: '2bec53b2142b459619f431ade24c085f',
-          form_timezone_offset: tzOffset,
-          answers: answers
-        })
-      });
+    document.querySelector('.star-row').style.display = 'none';
+    document.getElementById('feedbackName').style.display = 'none';
+    document.getElementById('feedbackComment').style.display = 'none';
+    document.querySelector('.feedback-submit').style.display = 'none';
 
-      // Hide all form elements
-      document.querySelector('.star-row').style.display = 'none';
-      document.getElementById('feedbackName').style.display = 'none';
-      document.getElementById('feedbackComment').style.display = 'none';
-      submitBtn.style.display = 'none';
-
-      const successEl = document.getElementById('feedbackSuccess');
-      successEl.style.display = 'block';
-      successEl.innerHTML = '<strong>Thank you' + (name ? ', ' + name : '') + '!</strong><br>Your rating (' + stars + ') has been saved' + (comment ? ' along with your comments' : '') + '. We really appreciate you taking the time! \uD83D\uDE4C';
-
-    } catch (err) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send feedback';
-      alert('Something went wrong. Please try again or email a.may@elsevier.com.');
-    }
+    const successEl = document.getElementById('feedbackSuccess');
+    successEl.style.display = 'block';
+    successEl.innerHTML = '<strong>Thank you' + (name ? ', ' + name : '') + '!</strong> Your Outlook should have opened with your feedback pre-filled — just hit send. If it didn\'t open, email <a href="mailto:a.may@elsevier.com" style="color:var(--orange-dark);">a.may@elsevier.com</a> directly.';
   }
 
 
