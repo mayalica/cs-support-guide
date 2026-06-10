@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customer Marketing · CS Support Request Guide</title>
+<title>Your Customer Marketing Support Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -235,7 +235,7 @@
 <nav class="quicknav" aria-label="Jump to section">
   <a href="#how-it-works">How it works</a>
   <a href="#what-you-can-request">What you can request</a>
-  <a href="#sla">SLA &amp; guidance</a>
+  <a href="#sla">Additional guidance</a>
   <a href="#form-access">Form access</a>
   <a href="#resources">Resources</a>
   <a href="#team">Help</a>
@@ -245,8 +245,8 @@
 <div class="hero">
   <div>
     <div class="hero-eyebrow">For Customer Success teams</div>
-    <h1>Your Customer Marketing<br>support guide</h1>
-    <p>Customer Marketing is your partner in scaling the reach and impact of your customer engagement programs. Use this guide and the intake form to get the support you need — from webinar setup to post-sale assets and beyond.</p>
+    <h1>Your Customer Marketing Support Guide</h1>
+    <p>This Guide establishes guidelines for how the Customer Marketing function provides tactical project support to Customer Success — including clarity on scope, operating model, submission process and timelines.</p>
   </div>
   <a class="hero-cta" href="https://forms.monday.com/forms/c5489105af900a5d7b90bf22f7677ebb?r=use1" target="_blank">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -257,6 +257,17 @@
 <div class="main">
 
 <div class="main">
+
+  <div class="section-label" style="margin-top:0;">About the Customer Marketing function</div>
+  <div class="partner-banner">
+    <div class="pb-icon">
+      <img src="partnership-trust.png" alt="Partnership" style="width:32px;height:32px;object-fit:contain;" />
+    </div>
+    <div>
+      <h2>How Customer Marketing Supports Your Goals</h2>
+      <p>Customer Marketing is a function of the Demand &amp; Lifecycle Marketing team. We are your dedicated partner — scaling the reach and impact of Customer Success programs through marketing activation and standardized communication frameworks. Together, we improve the customer experience, accelerate adoption and strengthen renewal confidence.</p>
+    </div>
+  </div>
 
   <div id="how-it-works" class="section-label">How it works</div>
   <div class="steps">
@@ -752,12 +763,12 @@
   <div id="feedback" class="section-label" style="margin-top:36px;">Share feedback</div>
   <div class="feedback-widget">
     <h3>How useful is this guide?</h3>
-    <p>Your feedback helps us improve. Responses go directly to Alica May, Director of Customer Marketing.</p>
+    <p>Your feedback helps us improve. All responses go directly to Alica May, Director of Customer Marketing.</p>
     <div class="star-row" id="starRow">
       <button class="star-btn" data-value="1" onclick="selectStar(1)" onmouseover="hoverStar(1)" onmouseout="unhoverStar()">★</button>
       <button class="star-btn" data-value="2" onclick="selectStar(2)" onmouseover="hoverStar(2)" onmouseout="unhoverStar()">★</button>
       <button class="star-btn" data-value="3" onclick="selectStar(3)" onmouseover="hoverStar(3)" onmouseout="unhoverStar()">★</button>
-      <button class="star-btn" data-value="4" onclick="selectStar(4)" onmouseover="hoverStar(4)" onmouseout="unhoverStar()">★</button>
+      <button class="star-btn" data-value="4" onclick="selectStar(4)" onmouseover="hoverStar(4)" onmouseover="hoverStar(4)" onmouseout="unhoverStar()">★</button>
       <button class="star-btn" data-value="5" onclick="selectStar(5)" onmouseover="hoverStar(5)" onmouseout="unhoverStar()">★</button>
     </div>
     <input class="feedback-textarea" id="feedbackName" type="text" placeholder="Your name (optional)" style="min-height:unset;height:38px;margin-bottom:10px;">
@@ -767,7 +778,7 @@
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       Send feedback
     </button>
-    <div class="feedback-success" id="feedbackSuccess" style="display:none;margin-top:12px;padding:12px 16px;background:var(--orange-light);border-radius:6px;color:var(--orange-dark);font-size:13px;font-weight:500;"></div>
+    <div class="feedback-success" id="feedbackSuccess">Thank you! Your email client should open with a pre-filled message — just hit send.</div>
   </div>
 
 
@@ -879,26 +890,22 @@
 
     const comment = document.getElementById('feedbackComment').value.trim();
     const name    = document.getElementById('feedbackName').value.trim();
-    const stars   = '\u2605'.repeat(selectedRating) + '\u2606'.repeat(5 - selectedRating);
+    const stars   = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
 
     const subject = encodeURIComponent('CS Support Guide Feedback — ' + stars);
-    const body    = encodeURIComponent(
-      'Rating: ' + stars + ' (' + selectedRating + '/5)' +
-      (name    ? '\nSubmitted by: ' + name       : '') +
-      (comment ? '\n\nComments:\n'  + comment     : '') +
-      '\n\n— Sent from the CS Support Request Guide'
-    );
+    let body = 'Rating: ' + stars + ' (' + selectedRating + '/5)';
+    if (name)    body += '\nName: ' + name;
+    if (comment) body += '\nComments: ' + comment;
 
-    window.location.href = 'mailto:a.may@elsevier.com?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:a.may@elsevier.com?subject=' + subject + '&body=' + encodeURIComponent(body);
 
     document.querySelector('.star-row').style.display = 'none';
     document.getElementById('feedbackName').style.display = 'none';
     document.getElementById('feedbackComment').style.display = 'none';
     document.querySelector('.feedback-submit').style.display = 'none';
-
     const successEl = document.getElementById('feedbackSuccess');
     successEl.style.display = 'block';
-    successEl.innerHTML = '<strong>Thank you' + (name ? ', ' + name : '') + '!</strong> Your Outlook should have opened with your feedback pre-filled — just hit send. If it didn\'t open, email <a href="mailto:a.may@elsevier.com" style="color:var(--orange-dark);">a.may@elsevier.com</a> directly.';
+    successEl.innerHTML = '<strong>Thanks' + (name ? ', ' + name : '') + '!</strong> Your email client should open with a pre-filled message — just hit send.';
   }
 
 
