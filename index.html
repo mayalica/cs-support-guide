@@ -512,6 +512,20 @@
           <td class="approvers" style="color:#aaa">—</td>
         </tr>
 
+        <tr class="q3-row" data-global="1" data-local="1">
+          <td>
+            <span class="req-name" style="color:var(--graphite-muted);">IPM for Consortia LeapSpace Onboarding</span>
+            <span class="req-desc">Details to follow</span>
+          </td>
+          <td class="center col-global"><span class="dot" style="color:#CBA96E">&#9679;</span></td>
+          <td class="center col-local"><span class="dot" style="color:#CBA96E">&#9679;</span></td>
+          <td class="ex" style="color:#bbb">Details to follow</td>
+          <td><span class="tl-badge" style="background:var(--blue-light);color:var(--blue);">H2</span></td>
+          <td class="submitters" style="color:#aaa">&#8212;</td>
+          <td class="approvers" style="color:#aaa">&#8212;</td>
+          <td class="approvers" style="color:#aaa">&#8212;</td>
+        </tr>
+
       </tbody>
     </table>
   </div>
@@ -581,6 +595,51 @@
           </tbody>
         </table>
         <div class="supp-note">PDF and video file formats are not supported for translation.</div>
+      </div>
+    </div>
+
+    <!-- BigMarker vs Teams -->
+    <div class="acc">
+      <button class="acc-toggle" onclick="toggleAcc(this)" aria-expanded="false">
+        <div class="acc-toggle-left">
+          <svg width="44" height="44" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;">
+            <rect x="6" y="8" width="78" height="54" rx="2" stroke="#1A1A1A" stroke-width="5" fill="white"/>
+            <rect x="18" y="22" width="40" height="7" rx="1" fill="#1A1A1A"/>
+            <rect x="18" y="34" width="40" height="7" rx="1" fill="#1A1A1A"/>
+            <rect x="18" y="46" width="40" height="7" rx="1" fill="#FF5A1A"/>
+            <path d="M30 62 L25 78 L65 78 L60 62Z" fill="#1A1A1A"/>
+            <rect x="20" y="76" width="50" height="6" rx="1" fill="#1A1A1A"/>
+          </svg>
+          <div>
+            <h3>BigMarker or Teams/Zoom?</h3>
+            <p>A guide for Customer Success on choosing the right webinar platform</p>
+          </div>
+        </div>
+        <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="acc-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;font-family:'DM Sans',sans-serif;">
+          <thead>
+            <tr style="background:var(--ivory);">
+              <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-weight:600;">Criteria / threshold</th>
+              <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-weight:600;text-decoration:underline;">BigMarker</th>
+              <th style="text-align:left;padding:10px 12px;border:1px solid var(--border);font-weight:600;">Teams</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">Institutions / accounts represented</td><td style="padding:9px 12px;border:1px solid var(--border);">2+ (multiple institutions)</td><td style="padding:9px 12px;border:1px solid var(--border);">1 (single institution)</td></tr>
+            <tr style="background:var(--ivory);"><td style="padding:9px 12px;border:1px solid var(--border);">Expected attendance</td><td style="padding:9px 12px;border:1px solid var(--border);">50 or more</td><td style="padding:9px 12px;border:1px solid var(--border);">Fewer than 50</td></tr>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">Scale</td><td style="padding:9px 12px;border:1px solid var(--border);">1:Many</td><td style="padding:9px 12px;border:1px solid var(--border);">1:Few</td></tr>
+            <tr style="background:var(--ivory);"><td style="padding:9px 12px;border:1px solid var(--border);">Registration management</td><td style="padding:9px 12px;border:1px solid var(--border);">Required</td><td style="padding:9px 12px;border:1px solid var(--border);">Optional / not needed</td></tr>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">Marketing or promotion</td><td style="padding:9px 12px;border:1px solid var(--border);">Requested / promoted externally</td><td style="padding:9px 12px;border:1px solid var(--border);">Not required</td></tr>
+            <tr style="background:var(--ivory);"><td style="padding:9px 12px;border:1px solid var(--border);">Engagement analytics &amp; account-level reporting</td><td style="padding:9px 12px;border:1px solid var(--border);">Required</td><td style="padding:9px 12px;border:1px solid var(--border);">Not required</td></tr>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">On-demand replay / evergreen content needed after event</td><td style="padding:9px 12px;border:1px solid var(--border);">Required</td><td style="padding:9px 12px;border:1px solid var(--border);">Not required</td></tr>
+            <tr style="background:var(--ivory);"><td style="padding:9px 12px;border:1px solid var(--border);">Recurring webinar series</td><td style="padding:9px 12px;border:1px solid var(--border);">Yes</td><td style="padding:9px 12px;border:1px solid var(--border);">No (Ad hoc or reactive)</td></tr>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">Robust automated communications</td><td style="padding:9px 12px;border:1px solid var(--border);">Yes</td><td style="padding:9px 12px;border:1px solid var(--border);">No</td></tr>
+            <tr style="background:var(--ivory);"><td style="padding:9px 12px;border:1px solid var(--border);">Certificate of attendance</td><td style="padding:9px 12px;border:1px solid var(--border);">Required</td><td style="padding:9px 12px;border:1px solid var(--border);">Not required</td></tr>
+            <tr><td style="padding:9px 12px;border:1px solid var(--border);">Typical formats</td><td style="padding:9px 12px;border:1px solid var(--border);">Multi-institution training webinars, promoted event, webinar series</td><td style="padding:9px 12px;border:1px solid var(--border);">Meeting, workshop, office hours, highly interactive</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -659,6 +718,7 @@
         <p>This guide and process will be reviewed on an ongoing basis. Feedback sessions can be arranged at any time — reach out to <strong>Alica May</strong> if something isn't working.</p>
       </div>
     </div>
+
   </div>
 
   <div id="resources" class="section-label" style="margin-top:36px;">Resources &amp; useful links</div>
@@ -749,10 +809,10 @@
       </div>
 
             <div class="team-card">
-        <div class="team-avatar placeholder" style="border-color:var(--border);background:var(--orange-light);color:var(--orange-dark);font-size:20px;font-weight:700;">AP</div>
+        <div class="team-avatar"><img src="data:image/png;base64,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" alt="Arken Papasina"></div>
         <div>
           <div class="team-name">Arken Papasina</div>
-          <div class="team-role">REPH team</div>
+          <div class="team-role">Digital Marketing Analyst III, REPH</div>
         </div>
       </div>
 
@@ -764,231 +824,84 @@
   <div id="feedback" class="section-label" style="margin-top:36px;">Share feedback</div>
   <div class="feedback-widget">
     <h3>How useful is this guide?</h3>
-    <p>Your feedback helps us improve. All responses go directly to Alica May, Director of Customer Marketing.</p>
+    <p>Your feedback helps us improve. Responses go directly to Alica May, Director of Customer Marketing.</p>
     <div class="star-row" id="starRow">
-      <button class="star-btn" data-value="1" onclick="selectStar(1)" onmouseover="hoverStar(1)" onmouseout="unhoverStar()">★</button>
-      <button class="star-btn" data-value="2" onclick="selectStar(2)" onmouseover="hoverStar(2)" onmouseout="unhoverStar()">★</button>
-      <button class="star-btn" data-value="3" onclick="selectStar(3)" onmouseover="hoverStar(3)" onmouseout="unhoverStar()">★</button>
-      <button class="star-btn" data-value="4" onclick="selectStar(4)" onmouseover="hoverStar(4)" onmouseover="hoverStar(4)" onmouseout="unhoverStar()">★</button>
-      <button class="star-btn" data-value="5" onclick="selectStar(5)" onmouseover="hoverStar(5)" onmouseout="unhoverStar()">★</button>
+      <button class="star-btn" data-value="1" onclick="selectStar(1)" onmouseover="hoverStar(1)" onmouseout="unhoverStar()">&#9733;</button>
+      <button class="star-btn" data-value="2" onclick="selectStar(2)" onmouseover="hoverStar(2)" onmouseout="unhoverStar()">&#9733;</button>
+      <button class="star-btn" data-value="3" onclick="selectStar(3)" onmouseover="hoverStar(3)" onmouseout="unhoverStar()">&#9733;</button>
+      <button class="star-btn" data-value="4" onclick="selectStar(4)" onmouseover="hoverStar(4)" onmouseout="unhoverStar()">&#9733;</button>
+      <button class="star-btn" data-value="5" onclick="selectStar(5)" onmouseover="hoverStar(5)" onmouseout="unhoverStar()">&#9733;</button>
     </div>
-    <input class="feedback-textarea" id="feedbackName" type="text" placeholder="Your name (optional)" style="min-height:unset;height:38px;margin-bottom:10px;">
-    <textarea class="feedback-textarea" id="feedbackComment" placeholder="Any comments or suggestions? (optional)"></textarea>
-    <br>
-    <button class="feedback-submit" onclick="submitFeedback()">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      Send feedback
-    </button>
-    <div class="feedback-success" id="feedbackSuccess">Thank you! Your email client should open with a pre-filled message — just hit send.</div>
+    <input type="text" id="feedbackName" placeholder="Your name (optional)" style="width:100%;border:1px solid var(--border);border-radius:4px;padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--graphite);margin-bottom:10px;box-sizing:border-box;">
+    <textarea class="feedback-textarea" id="feedbackText" placeholder="Any comments or suggestions? (optional)" rows="3"></textarea>
+    <div style="margin-bottom:12px;">
+      <button class="feedback-submit" onclick="submitFeedback()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Send feedback
+      </button>
+    </div>
+    <div class="feedback-success" id="feedbackSuccess">Thank you! Your feedback has been received.</div>
   </div>
 
-
-  <!-- Footer CTA -->
   <div class="footer-cta">
     <div class="left">
       <h3>Ready to submit a request?</h3>
-      <p>Allow <strong>2 working days</strong> for review and assignment. Questions? Contact <strong>Alica May</strong>, Director of Customer Marketing — <a href="mailto:a.may@elsevier.com">a.may@elsevier.com</a></p>
+      <p>Allow <strong>2 working days</strong> for review and assignment. Questions? Contact <strong>Alica May</strong>, Director of Customer Marketing &mdash; <a href="mailto:a.may@elsevier.com">a.may@elsevier.com</a></p>
     </div>
-    <a class="btn-submit" href="https://forms.monday.com/forms/c5489105af900a5d7b90bf22f7677ebb?r=use1" target="_blank">Submit intake form →</a>
+    <a class="hero-cta" href="https://forms.monday.com/forms/c5489105af900a5d7b90bf22f7677ebb?r=use1" target="_blank">Submit intake form &rarr;</a>
   </div>
 
-</div>
-
 <script>
-  function filterTable(type, btn) {
+  /* ── Table filter ── */
+  function filterTable(filter, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
-    // Show/hide data rows
-    document.querySelectorAll('#req-table tbody tr:not(.cat-row)').forEach(row => {
-      if (type === 'all') { row.style.display = ''; return; }
-      const match = type === 'global' ? row.dataset.global === '1' : row.dataset.local === '1';
-      row.style.display = match ? '' : 'none';
+    document.querySelectorAll('#reqTable tbody tr').forEach(row => {
+      if (row.classList.contains('cat-row')) { row.style.display = ''; return; }
+      const g = row.dataset.global === '1';
+      const l = row.dataset.local === '1';
+      const show = filter === 'all' || (filter === 'global' && g) || (filter === 'local' && l);
+      row.style.display = show ? '' : 'none';
     });
-
-    // Hide category rows with no visible children
-    document.querySelectorAll('#req-table tbody tr.cat-row').forEach(catRow => {
-      let next = catRow.nextElementSibling;
-      let hasVisible = false;
-      while (next && !next.classList.contains('cat-row')) {
-        if (next.style.display !== 'none') hasVisible = true;
-        next = next.nextElementSibling;
-      }
-      catRow.style.display = hasVisible ? '' : 'none';
-    });
-
-    // Toggle column visibility by index (col index 1 = Global, 2 = Local, 0-based)
-    const showGlobal = (type !== 'local');
-    const showLocal  = (type !== 'global');
-    const tbl = document.getElementById('req-table');
-
-    tbl.querySelectorAll('thead tr').forEach(tr => {
-      const ths = tr.querySelectorAll('th');
-      if (ths[1]) ths[1].style.display = showGlobal ? '' : 'none';
-      if (ths[2]) ths[2].style.display = showLocal  ? '' : 'none';
-    });
-    tbl.querySelectorAll('tbody tr').forEach(tr => {
-      const tds = tr.querySelectorAll('td');
-      if (tds[1]) tds[1].style.display = showGlobal ? '' : 'none';
-      if (tds[2]) tds[2].style.display = showLocal  ? '' : 'none';
-    });
+    const hideGlobal = filter === 'local';
+    const hideLocal  = filter === 'global';
+    document.querySelectorAll('.col-global, #col-global-h').forEach(el => el.style.display = hideGlobal ? 'none' : '');
+    document.querySelectorAll('.col-local,  #col-local-h').forEach(el => el.style.display = hideLocal  ? 'none' : '');
   }
+
+  /* ── Accordions ── */
   function toggleAcc(btn) {
-    const body = btn.nextElementSibling;
+    const acc = btn.closest('.acc');
+    const body = acc.querySelector('.acc-body');
     const chevron = btn.querySelector('.acc-chevron');
     const isOpen = body.classList.contains('open');
     body.classList.toggle('open', !isOpen);
-    chevron.classList.toggle('open', !isOpen);
     btn.setAttribute('aria-expanded', String(!isOpen));
+    if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
   }
 
-  // Smooth scroll for quick-nav
-  document.querySelectorAll('.quicknav a').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // Highlight active nav item on scroll
-  const sections = ['how-it-works','what-you-can-request','sla','form-access','resources','team','feedback'];
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 80) current = id;
-    });
-    document.querySelectorAll('.quicknav a').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }, { passive: true });
-
-  // Star rating
-  let selectedRating = 0;
-  function selectStar(val) {
-    selectedRating = val;
-    document.querySelectorAll('.star-btn').forEach((btn, i) => {
-      btn.classList.toggle('selected', i < val);
-    });
-  }
-  function hoverStar(val) {
-    document.querySelectorAll('.star-btn').forEach((btn, i) => {
-      btn.classList.toggle('hover', i < val);
-    });
+  /* ── Star rating ── */
+  let selected = 0;
+  function hoverStar(n) {
+    document.querySelectorAll('.star-btn').forEach((b, i) => b.classList.toggle('hover', i < n));
   }
   function unhoverStar() {
-    document.querySelectorAll('.star-btn').forEach(btn => btn.classList.remove('hover'));
+    document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('hover'));
+  }
+  function selectStar(n) {
+    selected = n;
+    document.querySelectorAll('.star-btn').forEach((b, i) => b.classList.toggle('selected', i < n));
   }
   function submitFeedback() {
-    if (selectedRating === 0) {
-      alert('Please select a star rating before submitting.');
-      return;
-    }
-
-    const comment = document.getElementById('feedbackComment').value.trim();
-    const name    = document.getElementById('feedbackName').value.trim();
-    const stars   = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
-
-    const subject = encodeURIComponent('CS Support Guide Feedback — ' + stars);
-    let body = 'Rating: ' + stars + ' (' + selectedRating + '/5)';
-    if (name)    body += '\nName: ' + name;
-    if (comment) body += '\nComments: ' + comment;
-
-    window.location.href = 'mailto:a.may@elsevier.com?subject=' + subject + '&body=' + encodeURIComponent(body);
-
-    document.querySelector('.star-row').style.display = 'none';
-    document.getElementById('feedbackName').style.display = 'none';
-    document.getElementById('feedbackComment').style.display = 'none';
-    document.querySelector('.feedback-submit').style.display = 'none';
-    const successEl = document.getElementById('feedbackSuccess');
-    successEl.style.display = 'block';
-    successEl.innerHTML = '<strong>Thanks' + (name ? ', ' + name : '') + '!</strong> Your email client should open with a pre-filled message — just hit send.';
+    const name = document.getElementById('feedbackName').value;
+    const text = document.getElementById('feedbackText').value;
+    const rating = selected ? 'Rating: ' + selected + '/5' : 'No rating given';
+    const from  = name ? 'From: ' + name : '';
+    const s = encodeURIComponent('CS Support Guide Feedback');
+    const b = encodeURIComponent([rating, from, '', text || '(No additional comments)'].filter(Boolean).join('\n'));
+    window.location.href = 'mailto:a.may@elsevier.com?subject=' + s + '&body=' + b;
+    document.getElementById('feedbackSuccess').style.display = 'block';
   }
-
-
 </script>
-
-<!-- ── FAQ Chat Agent ── -->
-<style>
-  .chat-fab {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--orange);
-    color: white;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.22);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.15s, transform 0.15s;
-    z-index: 1000;
-  }
-  .chat-fab:hover { background: var(--orange-dark); transform: scale(1.07); }
-  .chat-fab svg { width: 26px; height: 26px; }
-
-  .chat-panel {
-    position: fixed;
-    bottom: 96px;
-    right: 28px;
-    width: 370px;
-    max-height: 560px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.14);
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-    overflow: hidden;
-    font-family: 'DM Sans', sans-serif;
-  }
-  .chat-panel.open { display: flex; }
-
-  .chat-header {
-    background: var(--ink);
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-  }
-  .chat-header-left { display: flex; align-items: center; gap: 10px; }
-  .chat-header-icon {
-    width: 32px; height: 32px;
-    background: rgba(255,106,26,0.2);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .chat-header-icon svg { width: 16px; height: 16px; color: var(--orange); }
-  .chat-header h4 { font-size: 14px; font-weight: 600; color: white; margin: 0; }
-  .chat-header p { font-size: 11px; color: rgba(255,255,255,0.6); margin: 0; }
-  .chat-close-btn {
-    background: none; border: none; cursor: pointer;
-    color: rgba(255,255,255,0.6); padding: 4px;
-    display: flex; align-items: center; justify-content: center;
-    transition: color 0.12s;
-  }
-  .chat-close-btn:hover { color: white; }
-  .chat-close-btn svg { width: 18px; height: 18px; }
-
-  .chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: var(--paper);
-  }
-  .chat-msg {
-    max-width: 88%;
-    font-size: 13
+</body>
+</html>
