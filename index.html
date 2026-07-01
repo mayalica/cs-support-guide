@@ -403,6 +403,20 @@
           <td class="approvers">Ops Leads (page builds)</td>
         </tr>
 
+        <!-- Website updates -->
+        <tr class="cat-row"><td colspan="8">Website updates</td></tr>
+
+        <tr data-global="0" data-local="1">
+          <td><span class="req-name">Customer Success Hub updates</span><span class="req-desc">Updates to existing hubs only.</span></td>
+          <td class="center col-global"></td>
+          <td class="center col-local"><span class="dot-local">●</span></td>
+          <td class="ex">Copy changes, adding/removing new webinar links or other resources</td>
+          <td><span class="tl-badge">2–3 days</span></td>
+          <td class="submitters">Team Leads</td>
+          <td class="approvers">Regional Leads</td>
+          <td class="approvers">CE Lead</td>
+        </tr>
+
         <!-- eLearning -->
         <tr class="cat-row"><td colspan="8">eLearning</td></tr>
 
@@ -514,7 +528,7 @@
 
         <tr class="q3-row" data-global="1" data-local="1">
           <td>
-            <span class="req-name" style="color:var(--graphite-muted);">IPM for Consortia LeapSpace Onboarding</span>
+            <span class="req-name" style="color:var(--graphite-muted);">IPM for Consortia LeapSpace Awareness</span>
             <span class="req-desc">Details to follow</span>
           </td>
           <td class="center col-global"><span class="dot" style="color:#CBA96E">&#9679;</span></td>
@@ -856,7 +870,7 @@
   function filterTable(filter, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('#reqTable tbody tr').forEach(row => {
+    document.querySelectorAll('#req-table tbody tr').forEach(row => {
       if (row.classList.contains('cat-row')) { row.style.display = ''; return; }
       const g = row.dataset.global === '1';
       const l = row.dataset.local === '1';
